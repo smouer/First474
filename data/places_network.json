@@ -1,0 +1,2827 @@
+[
+	{
+		"name": "FIRST",
+		"address": {
+			"street": "32 Knox Road",
+			"city": "Ridgecrest",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28711"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.62129367463867,
+			"longitude": -82.27926333287039
+		},
+		"driveDurations": [
+			{
+				"destinationName": "Residence",
+				"duration": 1663.91
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 1510.61
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 1385.88
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1666.73
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 1451.66
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 1251.41
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 1747.12
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 366.57
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1687.62
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 1773.0
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 1030.72
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1048.47
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 987.15
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 1390.81
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 1405.05
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 1070.75
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 2100.22
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 1286.71
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 2069.66
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 1642.89
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 1311.58
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 1486.72
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1041.53
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 1405.13
+			}
+		]
+	},
+	{
+		"name": "Residence",
+		"address": {
+			"street": "Pond Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28806"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.5450823,
+			"longitude": -82.6052159
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1664.09
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 741.05
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 773.02
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 447.64
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 798.95
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 711.05
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 661.7
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1529.63
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1044.58
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 687.57
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 993.16
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1010.92
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 983.26
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 777.07
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 843.32
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 864.09
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1175.88
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 803.42
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 850.57
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 803.59
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 985.98
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 903.96
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1067.72
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 736.85
+			}
+		]
+	},
+	{
+		"name": "Health and Human Services",
+		"address": {
+			"street": "40 Coxe Avenue",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.592854,
+			"longitude": -82.554975
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1565.6
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 777.21
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 307.04
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 780.03
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 138.23
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 366.06
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 510.57
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1431.14
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1041.74
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 536.45
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 589.54
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 589.59
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 603.98
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 119.79
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 168.23
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 554.46
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1364.91
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 721.12
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1182.96
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 314.18
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 386.4
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 269.38
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 688.44
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 597.51
+			}
+		]
+	},
+	{
+		"name": "Smith-McDowell House Museum",
+		"address": {
+			"street": "340 Victoria Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.5719536,
+			"longitude": -82.55515079055624
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1457.07
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 775.34
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 299.95
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 778.16
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 331.13
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 241.33
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 722.93
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1322.6
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 917.01
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 748.81
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 616.87
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 634.62
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 606.96
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 180.16
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 179.55
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 487.8
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1240.18
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 596.39
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1181.08
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 512.69
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 527.74
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 467.51
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 691.42
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 472.77
+			}
+		]
+	},
+	{
+		"name": "ABC Board - Asheville",
+		"address": {
+			"street": "24 Old Brevard Road",
+			"city": "Venable",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28806"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.52100158917584,
+			"longitude": -82.60550355085269
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1659.65
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 448.0
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 738.28
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 770.25
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 796.19
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 706.6
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 565.28
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1525.18
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 791.21
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 591.15
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 988.71
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1006.47
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 978.81
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 774.31
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 840.55
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 859.64
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 922.51
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 798.97
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 440.36
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 800.83
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 983.22
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 901.19
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1063.27
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 732.4
+			}
+		]
+	},
+	{
+		"name": "Buncombe County Courthouse",
+		"address": {
+			"street": "Court Plaza",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.5956448,
+			"longitude": -82.5488817
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1492.02
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 866.49
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 169.6
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 349.33
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 869.31
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 436.91
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 599.85
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1357.55
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1112.59
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 625.73
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 514.57
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 514.62
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 529.01
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 195.75
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 206.65
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 477.1
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1435.77
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 791.97
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1272.24
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 401.7
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 282.18
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 267.21
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 613.47
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 668.36
+			}
+		]
+	},
+	{
+		"name": "Corner Kitchen",
+		"address": {
+			"street": "3 Boston Way",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "22803"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.566314,
+			"longitude": -82.5412112
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1312.88
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 652.99
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 363.31
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 238.58
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 655.8
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 411.03
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 736.2
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1178.42
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 794.66
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 762.07
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 498.63
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 516.39
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 488.73
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 243.51
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 257.75
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 369.56
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1117.83
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 416.06
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1058.73
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 593.72
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 465.8
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 542.18
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 573.19
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 350.42
+			}
+		]
+	},
+	{
+		"name": "DMV - Patton Ave",
+		"address": {
+			"street": "1624 Patton Avenue,",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28806"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.571529,
+			"longitude": -82.618249
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1758.03
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 657.7
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 482.67
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 705.94
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 557.31
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 540.57
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 764.96
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1623.57
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1104.91
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 25.88
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 924.01
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 924.06
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 938.45
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 518.69
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 584.93
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 888.93
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1236.2
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 897.36
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 960.24
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 545.22
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 727.6
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 645.58
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1022.91
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 830.79
+			}
+		]
+	},
+	{
+		"name": "Goodwill - Black Mountain",
+		"address": {
+			"street": "US 70",
+			"city": "Black Mountain",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28711"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.6152307,
+			"longitude": -82.3225194
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 383.81
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1529.1
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 1375.79
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 1251.06
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1531.91
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 1316.84
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 1116.59
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 1612.31
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1552.81
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 1638.18
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 895.9
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 913.66
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 852.33
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 1256.0
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 1270.23
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 935.93
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1965.41
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 1151.9
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1934.84
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 1508.07
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 1176.76
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 1351.9
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 906.71
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 1270.31
+			}
+		]
+	},
+	{
+		"name": "Goodwill - Mills Gap",
+		"address": {
+			"street": "51 Mills Gap Road",
+			"city": "Royal Pines",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28803"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.497845913958535,
+			"longitude": -82.51625081054951
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1663.55
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1046.12
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 1042.83
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 918.1
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 831.3
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 1090.55
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 784.63
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 1113.36
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1529.08
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 1139.23
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 992.61
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1010.37
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 982.71
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 923.04
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 937.27
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 863.54
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 442.18
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 557.01
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 599.54
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 1273.24
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 1092.94
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 1221.7
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1067.17
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 444.33
+			}
+		]
+	},
+	{
+		"name": "Goodwill - Patton Ave",
+		"address": {
+			"street": "1616 Patton Avenue",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28806"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.57059,
+			"longitude": -82.61705261231936
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1783.91
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 683.58
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 508.55
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 731.81
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 583.18
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 566.45
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 790.84
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 25.88
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1649.44
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1130.78
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 949.89
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 949.94
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 964.33
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 544.57
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 610.81
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 914.8
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1262.08
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 923.23
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 986.11
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 571.09
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 753.48
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 671.45
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1048.79
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 856.66
+			}
+		]
+	},
+	{
+		"name": "Goodwill - S Tunnel",
+		"address": {
+			"street": "86 Tunnel Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28805"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.587253641303995,
+			"longitude": -82.4941013875329
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1072.83
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1048.24
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 599.88
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 647.02
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1051.06
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 508.53
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 491.46
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 916.78
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 938.37
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1071.95
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 942.66
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 46.89
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 43.57
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 607.03
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 617.93
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 129.08
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1484.55
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 671.04
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1453.99
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 699.75
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 368.45
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 543.58
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 128.03
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 789.45
+			}
+		]
+	},
+	{
+		"name": "Ingles - W Tunnel",
+		"address": {
+			"street": "29 Tunnel Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28805"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.58767011118408,
+			"longitude": -82.49442370863537
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1090.59
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1066.0
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 599.93
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 664.77
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1068.81
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 508.58
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 509.22
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 916.84
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 956.13
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1089.7
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 942.71
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 46.89
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 61.33
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 607.09
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 617.99
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 146.84
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1502.31
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 688.79
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1471.74
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 699.81
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 368.5
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 543.63
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 145.79
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 807.21
+			}
+		]
+	},
+	{
+		"name": "Ingles - Oteen",
+		"address": {
+			"street": "1141 Tunnel Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28805"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.587345,
+			"longitude": -82.488335
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1029.26
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1038.33
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 614.32
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 637.11
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1041.15
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 522.97
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 481.55
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 931.22
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 894.8
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1062.04
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 957.1
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 43.57
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 61.33
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 621.47
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 614.62
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 119.18
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1462.21
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 661.13
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1444.08
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 714.19
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 382.88
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 558.02
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 84.46
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 779.55
+			}
+		]
+	},
+	{
+		"name": "Lab Corp",
+		"address": {
+			"street": "7 McDowell Street",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.58380320168398,
+			"longitude": -82.55549039219963
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1462.01
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 780.27
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 119.79
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 187.24
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 783.09
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 167.51
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 246.27
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 546.6
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1327.54
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 921.94
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 572.47
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 597.4
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 597.46
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 611.84
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 80.85
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 492.73
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1245.12
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 601.33
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1186.02
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 350.21
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 365.02
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 298.67
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 696.3
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 477.71
+			}
+		]
+	},
+	{
+		"name": "Labor Finders",
+		"address": {
+			"street": "9 Choctaw Street",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.58207351205375,
+			"longitude": -82.55203583540215
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1476.24
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 794.51
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 168.23
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 180.05
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 797.33
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 188.94
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 260.5
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 612.84
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1341.78
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 936.18
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 638.71
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 602.64
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 617.99
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 592.73
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 80.85
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 473.57
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1259.36
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 615.56
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1200.26
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 416.45
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 385.55
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 325.32
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 677.19
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 491.95
+			}
+		]
+	},
+	{
+		"name": "MANNA Foodbank",
+		"address": {
+			"street": "627 Swannanoa River Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28805"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.57527347751476,
+			"longitude": -82.50119413881663
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1148.44
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 919.17
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 588.38
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 517.95
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 921.99
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 480.68
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 362.39
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 922.39
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1013.97
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 942.88
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 948.26
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 129.08
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 146.84
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 119.18
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 522.88
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 495.46
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1355.48
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 541.97
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1324.92
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 705.36
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 342.27
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 549.18
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 203.64
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 660.38
+			}
+		]
+	},
+	{
+		"name": "ISM Incorporated",
+		"address": {
+			"street": "149 Old Shoals Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28704"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.4689906,
+			"longitude": -82.52648870314633
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 2076.15
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1177.42
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 1366.01
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 1241.28
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 962.6
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 1413.73
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 1107.81
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 1244.65
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1941.68
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 442.18
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 1270.53
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 1405.21
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1422.97
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 1395.31
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 1246.22
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 1260.45
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 1276.14
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 969.61
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 730.84
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 1495.97
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 1480.59
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 1544.88
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1479.77
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 767.51
+			}
+		]
+	},
+	{
+		"name": "PLI",
+		"address": {
+			"street": "605 Sweeten Creek Industrial Park Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28803"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.546749752419586,
+			"longitude": -82.51637569632635
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1262.64
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 868.6
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 715.29
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 590.56
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 871.42
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 763.02
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 396.17
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 951.81
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1128.17
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 557.01
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 977.69
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 591.7
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 609.46
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 581.79
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 595.5
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 609.73
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 462.63
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 969.61
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1126.98
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 945.71
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 692.03
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 867.16
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 666.26
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 380.39
+			}
+		]
+	},
+	{
+		"name": "Reich LLC",
+		"address": {
+			"street": "Rhinehart Racing, Vista Boulevard",
+			"city": "Avery Creek",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28704"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.467743600000006,
+			"longitude": -82.57987845448781
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 2065.07
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 853.43
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 1143.71
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 1175.68
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 437.37
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 1201.62
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 1112.03
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 970.71
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1930.61
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 598.69
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 996.58
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 1394.14
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 1411.9
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 1384.23
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 1179.74
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 1245.98
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 1265.07
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 729.99
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 1126.12
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 1206.26
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 1388.64
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 1306.62
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 1468.69
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 924.02
+			}
+		]
+	},
+	{
+		"name": "Silverline",
+		"address": {
+			"street": "900 Riverside Drive",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28804"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.61426174592569,
+			"longitude": -82.57512798703473
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1719.82
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 815.13
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 310.61
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 504.5
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 817.94
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 368.52
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 592.91
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 548.48
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1585.36
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1268.58
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 574.36
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 743.76
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 743.81
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 758.2
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 346.64
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 412.88
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 708.67
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1501.2
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 947.97
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1220.87
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 547.35
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 301.44
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 842.66
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 824.35
+			}
+		]
+	},
+	{
+		"name": "Social Security Administration",
+		"address": {
+			"street": "Short Chunns Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28802"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.5985345,
+			"longitude": -82.5300353
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1365.08
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1029.66
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 393.47
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 528.23
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1032.48
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 285.77
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 534.95
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 763.02
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1230.62
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1103.37
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 788.9
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 379.75
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 379.8
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 394.19
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 374.65
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 385.55
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 342.27
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1515.97
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 702.46
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1435.41
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 545.99
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 389.82
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 478.65
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 767.15
+			}
+		]
+	},
+	{
+		"name": "Steadfast",
+		"address": {
+			"street": "141 Hillside Street",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28801"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.60734220260896,
+			"longitude": -82.55601661204288
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1590.54
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 879.39
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 254.51
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 449.11
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 882.2
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 247.95
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 535.67
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 612.74
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1456.08
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1211.34
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 638.62
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 614.48
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 614.53
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 628.92
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 289.4
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 306.43
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 579.39
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1534.52
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 890.73
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1285.13
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 298.15
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 418.07
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 713.38
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 767.11
+			}
+		]
+	},
+	{
+		"name": "Charles George VA Medical Center",
+		"address": {
+			"street": "1100 Tunnel Road",
+			"city": "Asheville",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28805"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.58988545,
+			"longitude": -82.4841066809553
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1083.16
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 1122.31
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 698.3
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 721.09
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 1125.13
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 606.95
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 565.53
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 1015.2
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 948.7
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 1146.02
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 1041.08
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 127.55
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 145.31
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 83.98
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 705.45
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 698.6
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 203.15
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 1516.12
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 745.11
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 1528.06
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 798.17
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 466.86
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 642.0
+			},
+			{
+				"destinationName": "TradesMax Staffing",
+				"duration": 863.53
+			}
+		]
+	},
+	{
+		"name": "TradesMax Staffing",
+		"address": {
+			"street": "932 Hendersonville Road",
+			"city": "Biltmore Forest",
+			"county": "Buncombe",
+			"state": "North Carolina",
+			"postalCode": "28803"
+		},
+		"geographicCoordinates": {
+			"_comment": "use decimal degrees",
+			"latitude": 35.53962738130862,
+			"longitude": -82.53141634216838
+		},
+		"driveDurations": [
+			{
+				"destinationName": "FIRST",
+				"duration": 1325.66
+			},
+			{
+				"destinationName": "Residence",
+				"duration": 808.89
+			},
+			{
+				"destinationName": "Health and Human Services",
+				"duration": 598.6
+			},
+			{
+				"destinationName": "Smith-McDowell House Museum",
+				"duration": 473.87
+			},
+			{
+				"destinationName": "ABC Board - Asheville",
+				"duration": 802.8
+			},
+			{
+				"destinationName": "Buncombe County Courthouse",
+				"duration": 646.32
+			},
+			{
+				"destinationName": "Corner Kitchen",
+				"duration": 340.4
+			},
+			{
+				"destinationName": "DMV - Patton Ave",
+				"duration": 892.1
+			},
+			{
+				"destinationName": "Goodwill - Black Mountain",
+				"duration": 1191.19
+			},
+			{
+				"destinationName": "Goodwill - Mills Gap",
+				"duration": 444.33
+			},
+			{
+				"destinationName": "Goodwill - Patton Ave",
+				"duration": 917.98
+			},
+			{
+				"destinationName": "Goodwill - S Tunnel",
+				"duration": 654.72
+			},
+			{
+				"destinationName": "Ingles - W Tunnel",
+				"duration": 672.48
+			},
+			{
+				"destinationName": "Ingles - Oteen",
+				"duration": 644.82
+			},
+			{
+				"destinationName": "Lab Corp",
+				"duration": 478.81
+			},
+			{
+				"destinationName": "Labor Finders",
+				"duration": 493.04
+			},
+			{
+				"destinationName": "MANNA Foodbank",
+				"duration": 525.65
+			},
+			{
+				"destinationName": "ISM Incorporated",
+				"duration": 767.51
+			},
+			{
+				"destinationName": "PLI",
+				"duration": 380.39
+			},
+			{
+				"destinationName": "Reich LLC",
+				"duration": 924.88
+			},
+			{
+				"destinationName": "Silverline",
+				"duration": 829.01
+			},
+			{
+				"destinationName": "Social Security Administration",
+				"duration": 713.18
+			},
+			{
+				"destinationName": "Steadfast",
+				"duration": 777.47
+			},
+			{
+				"destinationName": "Charles George VA Medical Center",
+				"duration": 729.28
+			}
+		]
+	}
+]
