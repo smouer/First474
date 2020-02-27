@@ -2,84 +2,107 @@
         
 '''
 
-def create_data_model(dataFile=None):
-    data = {}
-    if dataFile is None:
-        data['time_matrix'] = [
-            [0, 13, 11, 15, 12, 12], # from FIRST to 1, 2, 3, 4, 5
-            [13, 0, 13, 20, 16, 17], # from 1 to FIRST, , 3, 4, 5
-            [11, 13, 0, 16, 14, 16], 
-            [16, 19, 15, 0, 5, 12],
-            [13, 17, 13, 5, 0, 11],
-            [13, 18, 16, 13, 10, 0] # from 5 to FIRST, 1, 2, 3, 4
-        ]
-
-        data['pickups_deliveries'] = [
-            [0, 1], # so someone needs to go from FIRST to 1
-            [0, 2],
-            [0, 4],
-            # there should NEVER be a dropoff without an associated pickup
-            [1, 0],
-            [2, 0],
-            [4, 0],
-            # but there could be a pickup up without an associated dropoff (for the day)
-            # [3, 0] # might want to comment out
-        ]
-
-        # time windows are based on minutes from midnight [0-1440)
-        # all time windows are associated w/ an the same index in pickup_deliveries array
-        data['time_windows'] = [
-            (465, 465),
-            (465, 465),
-            (465, 465),
-            (900, 900),
-            (900, 900),
-            (915, 915) 
-        ]
-
-        data['starts'] = [0]
-        data['ends'] = [3]
-        data['num_of_vehicles'] = 1
-
-    else:
-        # TODO: Implement reading from file/external source
-        pass
-    
-    return data
+from __future__ import print_function # TODO Remove because of routing_solver.py
+from ortools.constraint_solver import pywrapcp # TODO Remove because of routing_solver.py
+from ortools.constraint_solver import routing_enums_pb2 # TODO Remove because of routing_solver.py
 
 
+def get_default_data_model():
+    data_model = {}
 
-if __name__ == '__main__':
-
-    time_matrix = [
-        [0, 13, 11, 15, 12, 12],
-        [13, 0, 13, 20, 16, 17],
-        [11, 13, 0, 16, 14, 16],
+    data_model['time_matrix'] = [
+        #0  1   2   3   4   5
+        [0, 13, 11, 15, 12, 12], # from FIRST to 1, 2, 3, 4, 5
+        [13, 0, 13, 20, 16, 17], # from 1 to FIRST, , 3, 4, 5
+        [11, 13, 0, 16, 14, 16], 
         [16, 19, 15, 0, 5, 12],
         [13, 17, 13, 5, 0, 11],
-        [13, 18, 16, 13, 10, 0]
+        [13, 18, 16, 13, 10, 0] # from 5 to FIRST, 1, 2, 3, 4
     ]
 
-    time_windows = [
-        (21600, 55),
-        (95, 115),
-        (95, 115),
-        (95, 115),
-        (155, 175)
-    ]
+    data_model['depot'] = 0
+    
+    data_model['num_vehicles'] = 1
+    data_model['vehicle_capacities'] = [15]
 
-    number_of_locations = len(time_matrix)
-    van_capacities = [15]
-    number_of_vans = len(van_capacities)    
-    depot = 0
+    data_model['demands'] = [2, 3, 5]
 
+    return data_model
+
+def get_data_model(dataFile=None):
+    if dataFile is None:
+        return get_default_data_model()
+    else:
+        data_model = {}
+
+        # TODO: Implement reading from file/external source
+
+        return data_model
+
+    return None
+
+
+if __name__ == '__main__':    
+    # TODO Remove this eventually
     routing_index_manager = pywrapcp.RoutingIndexManager(6, 2, 0) # Create the routing index manager.
     routing_model = pywrapcp.RoutingModel(routing_index_manager)
+    data_model = get_data_model()
+
+    def time_callback(from_index, to_index):
+        '''
+            - returns time to between locations and passes it to the solver
+            - also sets the costs/weights of the edges which defines the cost of travel
+        '''
+
+        from_node = routing_index_manager.IndexToNode(from_index) # convert from routing variable index to time matrix index
+        to_node = routing_index_manager.IndexToNode(to_index)
+
+        return data_model['time_matrix'][from_node][to_node]
     
-    def distance_callback(from_index, to_index):
-        """Returns the distance between the two nodes."""
-        # Convert from routing variable Index to distance matrix NodeIndex.
-        from_node = manager.IndexToNode(from_index)
-        to_node = manager.IndexToNode(to_index)
-        return 1
+    def demand_callback(from_index):
+        from_node = routing_index_manager.IndexToNode(from_index)
+        
+        return data_model['demands'][from_node]
     
+    transit_callback_index = routing_model.RegisterTransitCallback(time_callback)
+    routing_model.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
+
+    allowed_waiting_time = 10 # aka the 'slack' we give the solver
+    total_route_time_upper_bound = 30
+
+    '''
+        Quantities at a node are represented by "cumul" variables and the increase or decrease of quantities
+        between nodes are represented by "transit" variables.
+        https://developers.google.com/optimization/reference/constraint_solver/routing/RoutingDimension
+    '''
+    force_start_cumul_to_zero = True
+
+    routing_model.AddDimensionWithVehicleCapacity(
+        transit_callback_index,
+        allowed_waiting_time,
+        total_route_time_upper_bound,
+        force_start_cumul_to_zero,
+        'Time'
+    )
+
+    demand_callback_index = routing_model.RegisterUnaryTransitCallback(demand_callback)
+
+    # dimensions represent quantiies that accumulate at nodes along routes. Ex: weight of routes like times or distance
+    routing_model.AddDimensionWithVehicleCapacity(
+        demand_callback_index,
+        0, # TODO: this means null capacity slack, but what does that mean?
+        data_model['vehicle_capacities'],
+        True, # starts the accumulation at zero (I think)
+        'Capacity'
+    )
+
+    # Apparnetly this allows the dropping of nodes... which means that if the problem can't be solved with
+    # all nodesbeing visted the algorithm can starting getting rid of nodes.
+    penalty = 1000 # higher value means worse for the algorithm to drop a node, which is probably good for us cause we want all nodes to be visted always.
+    for node in range(1, len(data_model['time_matrix'])):
+        # a disjunction is simply a variable that the solver uses to decide whether to include a given location in the solution.
+        routing_model.AddDisjunction([routing_index_manager.NodeToIndex(node)], penalty)
+    
+
+
+    # print the solution
