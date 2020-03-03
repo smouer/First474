@@ -1,7 +1,3 @@
-'''
-        
-'''
-
 from __future__ import print_function # TODO Remove because of routing_solver.py
 from ortools.constraint_solver import pywrapcp # TODO Remove because of routing_solver.py
 from ortools.constraint_solver import routing_enums_pb2 # TODO Remove because of routing_solver.py
@@ -25,7 +21,19 @@ def get_default_data_model():
     data_model['num_vehicles'] = 1
     data_model['vehicle_capacities'] = [15]
 
-    data_model['demands'] = [2, 3, 5]
+    # data_model['demands'] = [2, 3, 5]
+    data_model['demands'] = [
+        (2, 25200),
+        (3, 26100),
+        (5, 43200)
+    ]
+
+    # pickups and deliveries
+    data_model['demands'] = [
+        [[0, 2], 25200],
+        [[0, 3], 26100],
+        [[0, 5], 43200]
+    ]
 
     return data_model
 
@@ -85,6 +93,7 @@ if __name__ == '__main__':
         'Time'
     )
 
+
     demand_callback_index = routing_model.RegisterUnaryTransitCallback(demand_callback)
 
     # dimensions represent quantiies that accumulate at nodes along routes. Ex: weight of routes like times or distance
@@ -103,6 +112,30 @@ if __name__ == '__main__':
         # a disjunction is simply a variable that the solver uses to decide whether to include a given location in the solution.
         routing_model.AddDisjunction([routing_index_manager.NodeToIndex(node)], penalty)
     
+    # need to have dimension for tracking the total waiting for pickup-up time. Enforce the constraint of the waiting for
+    # a van time.
+    def total_time_waiting_callback(from_index):
+        return None
 
+    routing_model.AddDimension(
+        
+    )
+
+
+    # define pickup and delivery requests
+    for demand in data_model['demands']:
+        pickup_index = routing_index_manager.NodeToIndex(demand[0][0])
+        delivery_index = routing_index_manager.NodeToIndex(demand[0][1])
+        routing_model.AddPickupAndDelivery(pickup_index, delivery_index)
+
+        # adds the constraint that every pickup and delivery request has to be servided by the same vehicle 
+        routing_model.solver().Add(
+            routing_model.VehicleVar(pickup_index) == routing_model.VehicleVar(delivery_index)
+        )
+
+        # item has to be picked up before it can be dropped off 
+        routing_model.solver().Add(
+            Time.CumulVar(pickup_index) <= Time.CumulVar(delivery_index)
+        )
 
     # print the solution
