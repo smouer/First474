@@ -30,6 +30,7 @@ def get_data_model(dataFile=None):
             [13, 18, 16, 13, 10, 0] # from 5 to FIRST, 1, 2, 3, 4
         ]
 
+
         data_model['depot'] = 0 # more than one depot, primary depot (first) and secondary/waiting depot?
         
         data_model['number_of_vehicles'] = 2
@@ -79,6 +80,9 @@ def time_callback(from_index, to_index):
         - returns time to between locations and passes it to the solver
         - also sets the costs/weights of the edges which defines the cost of travel
     '''
+    global data
+    global routing_index_manager
+    global routing_model
 
     from_node = routing_index_manager.IndexToNode(from_index) # convert from routing variable index to time matrix index
     to_node = routing_index_manager.IndexToNode(to_index)
@@ -86,6 +90,10 @@ def time_callback(from_index, to_index):
     return data['time_matrix'][from_node][to_node]
 
 def add_time_window_constraints_to_solver():
+    global data
+    global routing_index_manager
+    global routing_model
+
     transit_callback_index = routing_model.RegisterTransitCallback(time_callback)
     routing_model.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
 
@@ -105,32 +113,47 @@ def add_time_window_constraints_to_solver():
     #   each vehicle along a route.
     # ... Then you can set a cost that is proportional to the maximum of the total something along each route...
 
-    # Add time window constraints for each location except depot.
     # Add the time window constraints
     for location, time_window in data['time_windows']:
         index = routing_index_manager.NodeToIndex(location) # this is where routing index manager is important/useful I beleive...
         time_dimension.CumulVar(index).SetRange(time_window[0], time_window[1])
 
-    # for location_id, time_window in enumerate(data['time_windows']): # enumerate time windows then split apart
-    #     if location_id == 0:
-    #         continue
-
-    #     index = routing_index_manager.NodeToIndex(location_id)
-    #     time_dimension.CumulVar(index).SetRange(time_window[0], time_window[1])
-
-    # Add time window constraints for each vehicle start node.
-    for vehicle_id in range(data['number_of_vehicles']):
-        index = routing_model.Start(vehicle_id)
-        
-        time_dimension.CumulVar(index).SetRange(data['time_windows'][0][0], data['time_windows'][0][1])
-
-    for i in range(data['number_of_vehicles']):
-        routing_model.AddVariableMinimizedByFinalizer(
-            time_dimension.CumulVar(routing_model.Start(i)))
-        routing_model.AddVariableMinimizedByFinalizer(
-            time_dimension.CumulVar(routing_model.End(i)))
-
+    # add time window constraints for each vehicle start node. Time IT must return back to depot between...
+    for vehicle in range(data['number_of_vehicles']):
+        index = routing_model.Start(vehicle) # whatever the depot is...
+        time_dimension.CumulVar(index).SetRange(0, 24) # TODO: Currently hardcodded in... add it to data model and specific to each vehicle
     
+
+    for vehicle in range(data['number_of_vehicles']):
+        # Q: What is this doing? 
+        # A: I believe what is happening that we tell the solver that we are trying to minimize the time that 
+        #   the vehicle leaves faciliy and minimize the time it comes back to depot.   
+        routing_model.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing_model.Start(vehicle)))
+        routing_model.AddVariableMinimizedByFinalizer(time_dimension.CumulVar(routing_model.End(vehicle)))
+
+def print_solution(data, manager, routing, assignment):
+    """Prints assignment on console."""
+    time_dimension = routing.GetDimensionOrDie('Time')
+    total_time = 0
+    for vehicle_id in range(data['number_of_vehicles']):
+        index = routing.Start(vehicle_id)
+        plan_output = 'Route for vehicle {}:\n'.format(vehicle_id)
+        while not routing.IsEnd(index):
+            time_var = time_dimension.CumulVar(index)
+            plan_output += '{0} Time({1},{2}) -> '.format(
+                manager.IndexToNode(index), assignment.Min(time_var),
+                assignment.Max(time_var))
+            index = assignment.Value(routing.NextVar(index))
+        time_var = time_dimension.CumulVar(index)
+        plan_output += '{0} Time({1},{2})\n'.format(manager.IndexToNode(index),
+                                                    assignment.Min(time_var),
+                                                    assignment.Max(time_var))
+        plan_output += 'Time of the route: {}min\n'.format(
+            assignment.Min(time_var))
+        print(plan_output)
+        total_time += assignment.Min(time_var)
+    print('Total time of all routes: {}min'.format(total_time))  
+
 if __name__ == '__main__':    
     data = get_data_model()
     initialize_solver()
@@ -139,5 +162,7 @@ if __name__ == '__main__':
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
     search_parameters.first_solution_strategy = (routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)
     assignment = routing_model.SolveWithParameters(search_parameters)
- 
+    if assignment:
+        print_solution(data, routing_index_manager, routing_model, assignment)
+
     # print the solution
