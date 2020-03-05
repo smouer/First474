@@ -1,6 +1,6 @@
 from __future__ import print_function # TODO Remove because of routing_solver.py
-from ortools.constraint_solver import pywrapcp # TODO Remove because of routing_solver.py
 from ortools.constraint_solver import routing_enums_pb2 # TODO Remove because of routing_solver.py
+from ortools.constraint_solver import pywrapcp # TODO Remove because of routing_solver.py
 
 
 def get_default_data_model():
@@ -18,21 +18,17 @@ def get_default_data_model():
 
     data_model['depot'] = 0
     
-    data_model['num_vehicles'] = 1
+    data_model['number_of_vehicles'] = 2
     data_model['vehicle_capacities'] = [15]
-
-    # data_model['demands'] = [2, 3, 5]
-    data_model['demands'] = [
-        (2, 25200),
-        (3, 26100),
-        (5, 43200)
-    ]
 
     # pickups and deliveries
     data_model['demands'] = [
-        [[0, 2], 25200],
-        [[0, 3], 26100],
-        [[0, 5], 43200]
+        (0, 5),  # depot
+        (7, 12),  # 1
+        (10, 15),  # 2
+        (5, 14),  # 3
+        (5, 13),  # 4
+        (0, 5),  # 5
     ]
 
     return data_model
@@ -67,5 +63,42 @@ if __name__ == '__main__':
 
         return data_model['time_matrix'][from_node][to_node]
     
+    transit_callback_index = routing_model.RegisterTransitCallback(time_callback)
+    routing_model.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
 
+    routing_model.AddDimension(
+        transit_callback_index,
+        15, # waiting time
+        60, # maximum time per vehicle
+        False,
+        'Time'
+    )
+
+    time_dimension = routing_model.GetDimensionOrDie('Time')
+
+    # Add time window constraints for each location except depot.
+    for location_id, time_window in enumerate(data_model['demands']):
+        if location_id == 0:
+            continue
+
+        index = routing_index_manager.NodeToIndex(location_id)
+        time_dimension.CumulVar(index).SetRange(time_window[0], time_window[1])
+
+    # Add time window constraints for each vehicle start node.
+    for vehicle_id in range(data_model['number_of_vehicles']):
+        index = routing_model.Start(vehicle_id)
+        
+        time_dimension.CumulVar(index).SetRange(data_model['demands'][0][0], data_model['demands'][0][1])
+
+    for i in range(data_model['number_of_vehicles']):
+        routing_model.AddVariableMinimizedByFinalizer(
+            time_dimension.CumulVar(routing_model.Start(i)))
+        routing_model.AddVariableMinimizedByFinalizer(
+            time_dimension.CumulVar(routing_model.End(i)))
+            
+
+    
+    search_parameters = pywrapcp.DefaultRoutingSearchParameters()
+    search_parameters.first_solution_strategy = (routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)
+    assignment = routing_model.SolveWithParameters(search_parameters)
     # print the solution
