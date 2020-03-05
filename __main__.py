@@ -30,20 +30,29 @@ def get_data_model(dataFile=None):
             [13, 18, 16, 13, 10, 0] # from 5 to FIRST, 1, 2, 3, 4
         ]
 
-        data_model['depot'] = 0
+        data_model['depot'] = 0 # more than one depot, primary depot (first) and secondary/waiting depot?
         
         data_model['number_of_vehicles'] = 2
-        data_model['vehicle_capacities'] = [15]
+        data_model['vehicle_capacities'] = [15, 15, 15, 15, 15]
 
         # pickups and deliveries
         data_model['time_windows'] = [
-            (0, 5),  # depot
-            (7, 12),  # 1
-            (10, 15),  # 2
-            (5, 14),  # 3
-            (5, 13),  # 4
-            (0, 5),  # 5
+            # format [location, (t_start, t_end)]
+            [1, (0, 5)],
+            [3, (0, 5)],
+            [3, (0, 5)],
+            [4, (5, 6)]
         ]
+
+        # data_model['time_windows'] = [
+        #     (0, 5),  # depot
+        #     (7, 12),  # 1
+        #     (10, 15),  # 2
+        #     (5, 14),  # 3
+        #     (5, 13),  # 4
+        #     (0, 5),  # 5
+        # ]
+
     else:
         # TODO: Implement reading from file/external source
         pass
@@ -62,7 +71,7 @@ def initialize_solver(): # call this or NOTHING will worrkkkkk
         data['number_of_vehicles'], 
         data['depot']
     )
-    
+
     routing_model = pywrapcp.RoutingModel(routing_index_manager)
 
 def time_callback(from_index, to_index):
@@ -97,12 +106,17 @@ def add_time_window_constraints_to_solver():
     # ... Then you can set a cost that is proportional to the maximum of the total something along each route...
 
     # Add time window constraints for each location except depot.
-    for location_id, time_window in enumerate(data['time_windows']): # enumerate time windows then split apart
-        if location_id == 0:
-            continue
-
-        index = routing_index_manager.NodeToIndex(location_id)
+    # Add the time window constraints
+    for location, time_window in data['time_windows']:
+        index = routing_index_manager.NodeToIndex(location) # this is where routing index manager is important/useful I beleive...
         time_dimension.CumulVar(index).SetRange(time_window[0], time_window[1])
+
+    # for location_id, time_window in enumerate(data['time_windows']): # enumerate time windows then split apart
+    #     if location_id == 0:
+    #         continue
+
+    #     index = routing_index_manager.NodeToIndex(location_id)
+    #     time_dimension.CumulVar(index).SetRange(time_window[0], time_window[1])
 
     # Add time window constraints for each vehicle start node.
     for vehicle_id in range(data['number_of_vehicles']):
