@@ -33,7 +33,7 @@ def define_data():
                      '1100+Tunnel+Road+Asheville+NC',
                      '932+Hendersonville+Road+Asheville+NC'
                      ]
-    data['API_key'] = 'AIzaSyDR0MpU_NL31NvKDu8BzOjvDwVYO75xq2c'
+    data['API_key'] = ***
     return data
 
 def create_distance_matrix(data):
