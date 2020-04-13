@@ -16,21 +16,21 @@ def generate_data(matrix):
     request = namedtuple("request", ['node', 'time', 'is_dropoff'])
 
     Depot = request(0,0,False)
-    request_list = [Depot, request(3,60,True), request(4,60,True), request(7,90,True), request(3, 120, False) ]
+    request_list = [Depot, request(3,60,True), request(4,60,True), request(7,90,True), request(3, 120, False) ] #dummy data
     length = len(request_list)
     
-    node_matrix = np.zeros((length,length))
+    node_matrix = np.zeros((length,length)) #zero matrix of our problem size, to be filled next
 
     for i in range(length):
         for j in range(length):
-            node_matrix[i][j] = matrix[request_list[i].node][request_list[j].node]
+            node_matrix[i][j] = matrix[request_list[i].node][request_list[j].node] #grabs entries from the "master" matrix for the local matrix
 
 
     tw = []
     for rq in request_list:
         if rq.is_dropoff:
-            tw.append((rq.time - 30, rq.time))
-        else: tw.append((rq.time, rq.time+30))
+            tw.append((rq.time - 30, rq.time)) #arrive before scheduled time for a dropoff
+        else: tw.append((rq.time, rq.time+30)) #after scheduled time for a pickup
 
 
     data = {}
