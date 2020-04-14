@@ -13,31 +13,33 @@ def read_matrix():
     return matrix
 
 def generate_data(matrix):
+
     request = namedtuple("request", ['node', 'time', 'is_dropoff'])
 
     Depot = request(0,0,False)
-    request_list = [Depot, request(3,60,True), request(4,60,True), request(7,90,True), request(3, 120, False) ] #dummy data
+    request_list = [Depot, request(3,60,True), request(4,60,True), request(7,90,True), request(3, 90, False), request(7,160,True) ]
     length = len(request_list)
     
-    node_matrix = np.zeros((length,length)) #zero matrix of our problem size, to be filled next
+    node_matrix = np.zeros((length,length))
 
     for i in range(length):
         for j in range(length):
-            node_matrix[i][j] = matrix[request_list[i].node][request_list[j].node] #grabs entries from the "master" matrix for the local matrix
+            node_matrix[i][j] = matrix[request_list[i].node][request_list[j].node]
 
 
     tw = []
     for rq in request_list:
-        if rq.is_dropoff:
-            tw.append((rq.time - 30, rq.time)) #arrive before scheduled time for a dropoff
-        else: tw.append((rq.time, rq.time+30)) #after scheduled time for a pickup
-
+        if rq.node == 0:
+            tw.append((rq.time, rq.time + 240))
+        elif rq.is_dropoff:
+            tw.append((rq.time - 20, rq.time))
+        else: tw.append((rq.time, rq.time+20))
 
     data = {}
     data['time_matrix'] = node_matrix
     data['time_windows'] = tw
     data['depot'] = 0
-    data['num_vehicles'] = 1
+    data['num_vehicles'] = 2
     
     return data
 
@@ -45,7 +47,6 @@ def generate_data(matrix):
 
 def print_solution(data, manager, routing, solution):
     """Prints solution on console."""
-    print("hello, hello")
     time_dimension = routing.GetDimensionOrDie('Time')
     total_time = 0
     for vehicle_id in range(data['num_vehicles']):
@@ -67,8 +68,7 @@ def print_solution(data, manager, routing, solution):
         total_time += solution.Min(time_var)
     print('Total time of all routes: {}min'.format(total_time))
 
-def run():
-    print("Lets debug!!")
+def run(slack):
     matrix = read_matrix()
     data = generate_data(matrix)
     manager = RoutingIndexManager(len(data['time_matrix']), data['num_vehicles'], data['depot'])
@@ -89,7 +89,7 @@ def run():
     #add time dimension
     routing.AddDimension(
         transit_callback_index,
-        30,
+        slack,
         240,
         False,
         time)
@@ -124,13 +124,29 @@ def run():
     # Print solution on console.
     if solution:
         print_solution(data, manager, routing, solution)
+    
     print("Status: ", routing.status())
+    #0: not solved yet
+    #1: success
+    #2: no solution
+    #3: solver timed out
+    #4: routing parameters invalid
+    return(routing.status())
 
 def main():
     #matrix = read_matrix()
-    #generate_request(matrix)
-    run()
+    #generate_data(matrix)
+    slack = 0
+    
+    status = run(slack)
 
+    while status != 1 & slack < 30:
+        slack += 5
+        status = run(slack)
+
+    if status != 1:
+        print("No optimal schedule found under these conditions.")
+    else: print(slack)
 
 if __name__ == '__main__':
     main()
