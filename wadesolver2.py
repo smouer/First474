@@ -7,17 +7,21 @@ from ortools.constraint_solver import pywrapcp
 from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver.pywrapcp import RoutingIndexManager, RoutingModel
 
+request = namedtuple("request", ['node', 'time', 'is_dropoff'])
+
+
 def read_matrix():
     matrix = np.loadtxt(open('time_matrix.csv'), int, delimiter = ',' )
     #print(matrix)
     return matrix
 
-def generate_data(matrix):
-
-    request = namedtuple("request", ['node', 'time', 'is_dropoff'])
-
+def get_request_list():
     Depot = request(0,0,False)
     request_list = [Depot, request(3,60,True), request(4,60,True), request(7,90,True), request(3, 90, False), request(7,160,True) ]
+    return request_list
+
+
+def generate_data(matrix, request_list):
     length = len(request_list)
     
     node_matrix = np.zeros((length,length))
@@ -32,8 +36,8 @@ def generate_data(matrix):
         if rq.node == 0:
             tw.append((rq.time, rq.time + 240))
         elif rq.is_dropoff:
-            tw.append((rq.time - 20, rq.time))
-        else: tw.append((rq.time, rq.time+20))
+            tw.append((rq.time - 20, rq.time)) #dropoffs occur within 20 minutes before scheduled time
+        else: tw.append((rq.time, rq.time+20)) #pickups occur within 20 minutes after
 
     data = {}
     data['time_matrix'] = node_matrix
@@ -68,9 +72,9 @@ def print_solution(data, manager, routing, solution):
         total_time += solution.Min(time_var)
     print('Total time of all routes: {}min'.format(total_time))
 
-def run(slack):
+def run(slack, request_list):
     matrix = read_matrix()
-    data = generate_data(matrix)
+    data = generate_data(matrix,request_list)
     manager = RoutingIndexManager(len(data['time_matrix']), data['num_vehicles'], data['depot'])
     routing = RoutingModel(manager)
 
@@ -133,20 +137,67 @@ def run(slack):
     #4: routing parameters invalid
     return(routing.status())
 
-def main():
-    #matrix = read_matrix()
-    #generate_data(matrix)
-    slack = 0
-    
-    status = run(slack)
+def run_block(r_l, start, stop):
+        print("\n \n Time Block Start Time: ", start)
+        slack = 0
+        status = run(slack,r_l)
+        while status != 1 and slack < 30:
+            slack += 5
+            status = run(slack, r_l)
+        if status != 1:
+            print("No optimal schedule found under these conditions.")
+        else: print(slack)
+        print("Time Block Stop Time: ", stop)
 
+def run_with_blocks():
+
+    def newList(start, list):
+        new_list = []
+        new_list.append(request(0,start,False))
+        for rq in list:
+            new_list.append(rq)
+        return new_list
+
+    print("Running with 60 minute time blocks.")
+    block = 60
+
+    
+    r_l = get_request_list()
+    num_blocks = r_l[-1].time // block + 1
+    start = 0
+    stop = block
+    n = 0
+    m = 0
+    for i in range(num_blocks):
+        while m < len(r_l) and r_l[m].time <= stop :
+            m+= 1
+        list = r_l[n:m]
+        list = newList(start, list)
+        print(list)
+        n = m
+        run_block(list, start, stop)
+        start = start + block
+        stop = stop + block
+
+
+def run_without_blocks():
+    r_l = get_request_list()
+    print(r_l)
+    slack = 0
+    status = run(slack,r_l)
     while status != 1 & slack < 30:
         slack += 5
-        status = run(slack)
-
+        status = run(slack, r_l)
     if status != 1:
         print("No optimal schedule found under these conditions.")
     else: print(slack)
+
+def main():
+    
+    #run_without_blocks()
+    
+    run_with_blocks()
+    
 
 if __name__ == '__main__':
     main()
